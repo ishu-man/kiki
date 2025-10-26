@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap');
+
+.back-button {
+  transform: rotate(180deg);
+}
+
+.music-player {
+    width: 400px;
+    background-color: #612400;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.album-art {
+    width: 100%;
+    height: 300px;
+    background: url(images/kiki-cover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.song-info {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.song-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.artist-name {
+    font-size: 16px;
+}
+
+/* This is how you make a dynamic progress bar: */
+
+.progress-section .progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgb(249, 214, 214);
+    width: 100%;
+    height: 6px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.progress-section .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: orangered;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* border: 8px solid white; */
+    box-shadow: 0 0 8px rgb(92, 83, 83);
+
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.controls button {
+    /* background: none; */
+    border: none;
+    background-color: orangered;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.controls .play-button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+}
+
+.audio-player-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ready-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-inline: 36px;
+    margin-top: -56px;
+}
+
+
+.ready-button {
+    background-color: #00A3FF;
+    font-family: 'Bricolage Grotesque';
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding-inline: 48px;
+    padding-block: 12px;
+    border-radius: 12px;
+    border: 2px rgb(0, 0, 0) solid;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+.review-heading {
+    text-align: left;
+    margin-inline: 52px;
+    margin-bottom: 0;
+}
+
+.review-text {
+    margin-inline: 52px;
+    margin-top: 0px;
+}
+
+.content-section {
+    margin-bottom: 36px;
+}
+
+.flashcards-section {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 24px;
+    border: 3px solid black;
+    margin-inline: 256px;
+
+    margin-bottom: 36px;
+}
+
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    padding: 20px;
+}
+
+.left-subtext, .right-subtext {
+    text-align: center;
+}
+
+.due-minutes {
+    color: orangered;
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 12px;
+}
+
+.due-cards {
+    color: orangered;
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 12px;
+}
+
+#separator {
+    font-size: 140px;
+    font-weight: 550;
+}
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options-container {
+    display: flex;
+    gap: 24px;
+}

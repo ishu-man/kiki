@@ -1,0 +1,106 @@
+/* 
+NOTES FOR THE FUTURE SELF:
+How does the next button work? You literally just do 3 things:
+1. Change the card's class back to front
+2. Change the textcontent to the new one from the JSON
+3. Hide the again hard good easy options container
+
+What do you do once the card is clicked on?
+1. Reveal the back-side. This is the same as changing the class to flashcard-back
+2. Change the text content to the back info received by JSON.
+3. Show the options container.
+4. Register user input (again, hard, good, etc.) -- is this even supposed to be a form?
+[THINK] Should I just have the user click the button and register that click event and then do the following:
+a. see which button was clicked. Check the button's class, I mean (hard, easy, etc.)
+b. register the button's class (type) and the card's front-side and append that into a JSON.
+c. send that JSON to the FSRS implementation in python and get data on when it's due later.
+d. send a JSON to the frontend telling me which card is due when. These cards will have to be saved in a database too.
+Oh shit, if the cards are being retreived from a DB (postgres) how am I even doing the 'update it with Javascript' thing?
+I think I will set up a DRF endpoint which sends data from the server to the JS.
+
+All of this tells me that I have done enough on the frontned and will really have to focus on the backend now!
+
+*/
+
+
+h1 {
+    text-align: center;
+}
+
+.flashcards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard-front {
+    border: black 3px solid;
+    width: 400px;
+    height: 400px;
+    background-color: orangered;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.flashcard-back {
+    border: black 3px solid;
+    width: 400px;
+    height: 400px;
+    background-color: #00A3FF;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.options-container {
+    margin-top: 36px;
+    margin-inline: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input, button{
+    background-color: #00A3FF;
+    font-family: 'Bricolage Grotesque';
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding-inline: 48px;
+    padding-block: 12px;
+    border-radius: 12px;
+    border: 2px rgb(0, 0, 0) solid;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    cursor: pointer;
+}
+
+.again {
+    background-color: red;
+}
+
+.hard {
+    background-color: grey;
+}
+
+.good {
+    background-color: green;
+}
+
+.easy {
+    background-color: skyblue;
+}
+
+h3 {
+    margin-bottom: 12px;
+}
+
+.button-meanings {
+    margin-bottom: 36px;
+    margin-inline: 54px;
+}
+
+.again-meaning, .hard-meaning, .good-meaning, .easy-meaning {
+    margin-bottom: 8px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="audio-styles.css" />
+    <title>Audio Page</title>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <ul>
+          <li class="nav-heading"><strong><a href="index.html">Kiki</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="https://dl.acm.org/doi/10.1145/3534678.3539081?cid=99660547150">Research</a></li>
+        <li><a href="#">Try it</a></li>
+      </ul>
+    </nav>
+    <div class="content-section-audio-page">
+        <div class="blob"></div>
+      <h1 class="hero-heading">Your Personalized Audio Lesson is Ready!</h1>
+      <p class="hero-text">
+        Created just for you. Listen closely – your FSRS flashcard review is next!
+      </p>
+    </div>
+    <div class="audio-player-wrapper">
+      <div class="music-player">
+        <div class="album-art"></div>
+        <div class="song-info">
+          <div class="song-name"></div>
+        </div>
+        <div class="progress-section">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="progress"
+            id="progress"
+          />
+        </div>
+        <div class="time-info">
+          <span class="current-time">00:00</span>
+          <span class="duration-time">00:00</span>
+        </div>
+        <div class="controls">
+          <button class="back-button">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+          <button class="play-button">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="fast-forward-button">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <form action="flashcards.html" method="GET" enctype="multipart/form-data">
+      <div class="ready-section">
+          <button class="ready-button">
+              I'm ready
+              <i class="fa-solid fa-arrow-right"></i>
+          </button>
+      </div>
+    </form>
+
+    <!-- replace audio below by generated audio.. -->
+    <audio src="../backend/audio/output.wav" id="audio"></audio>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/df7e89c80c.js"
+    crossorigin="anonymous"
+  ></script>
+<script src="audio-script.js"></script>
+</html>

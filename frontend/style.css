@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cedarville+Cursive&display=swap');
+
+body {
+    font-family: 'Bricolage Grotesque';
+    font-size: 24px;
+    background-color: #f8f1e3;
+    color: black;
+
+}
+
+.blob {
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    background: linear-gradient(47deg, #2323FF 21%,  orangered 67%, orangered 81%);
+    width: 400px;
+    height: 400px;
+    box-shadow: inset 50px 50px 17px 0px orangered,
+                inset 100px 100px 17px 0px orangered;
+    opacity: 0.5;
+    filter: blur(40px);    
+    z-index: -1;
+    animation: animate 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) 
+               infinite alternate forwards;
+    position: fixed;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(40%, -25%);
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  50% {
+    transform: translate(0%, 13%);
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    transform: translate(-45%, 39%);
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-radius: 24px;
+    border: 2px solid black;
+    /* border: 2px solid green; */
+    /* box-shadow: 0 0 8px #612400; */
+}
+
+.highlighted {
+    color: orangered;
+    /* font-family: 'Cedarville Cursive'; */
+    /* font-size: 54px; */
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid limegreen; */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-heading {
+    margin-bottom: 0;
+}
+
+.fsrs-heading {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hero-text {
+    /* border: 2px solid salmon; */
+    /* margin-inline: 200px; */
+    padding-inline: 120px;
+    margin-bottom: 32px;
+}
+
+
+#context, #goal {
+    height: 80px;
+    width: 452px;
+    border: none;
+    border-radius: 16px;
+    /* box-shadow: 0 0 1px #B34100; */
+    outline: black 2px solid;
+    line-height: 0;
+    padding-inline: 24px;
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+
+}
+
+#topic {
+    height: 50px;
+    width: 452px;
+    border: none;
+    border-radius: 16px;
+    /* box-shadow: 0 0 1px #B34100; */
+    outline: black 2px solid;
+    line-height: 0;
+    padding-inline: 24px;
+    font-family: 'Bricolage Grotesque';
+    font-size: 18px;
+}
+
+input {
+    background-color: #f8f1e3;
+    color: black;
+}
+
+.user-prompt-section {
+    /* border: 2px solid green; */
+    margin-inline: 24px;
+    padding: 24px;
+    /* box-shadow: 0 0 8px #FFCF71; */
+    border-radius: 16px;
+}
+
+.topic, .context, .goal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.prompt-heading {
+    font-family: 'Bricolage Grotesque';
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.topic-text p, .context-text p, .goal-text p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.example-subtext {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.submit-button {
+    background-color: #00A3FF;
+    font-family: 'Bricolage Grotesque';
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding-inline: 48px;
+    padding-block: 12px;
+    border-radius: 12px;
+    border: 2px rgb(0, 0, 0) solid;
+    cursor: pointer;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.submit-button-processing {
+    background-color: grey;
+    font-family: 'Bricolage Grotesque';
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding-inline: 48px;
+    padding-block: 12px;
+    border-radius: 12px;
+    border: 2px rgb(0, 0, 0) solid;
+    cursor: pointer;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.submit-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section-audio-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

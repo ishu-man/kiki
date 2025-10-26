@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="flashcards-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <ul>
+          <li class="nav-heading"><strong><a href="index.html">Kiki</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="https://dl.acm.org/doi/10.1145/3534678.3539081?cid=99660547150">Research</a></li>
+        <li><a href="#">Try it</a></li>
+      </ul>
+    </nav>
+    <div class="content-section">
+      <div class="blob"></div>
+      <h1 class="hero-heading">Flashcards for practice!</h1>
+      <p class="hero-text">
+Ready for active recall? These flashcards are automatically generated from your audio lesson. Answer honestly based on how well you recalled the information. Kiki uses your ratings and the FSRS algorithm to schedule the next review for optimal retention.      </p>
+        <div class="button-meanings">
+          <h3>Button meanings:</h1>
+          <div class="again-meaning"><span style="color: red"><strong>Again</strong></span>: Select this if you could not recall the answer at all. The card will be shown again soon.</div>
+          <div class="hard-meaning"><span style="color: grey"><strong>Hard</strong></span>: Select this if recalling the answer was possible but very difficult or took a long time..</div>
+          <div class="good-meaning"><span style="color: green"><strong>Good</strong></span>: Select this if you recalled the answer correctly and with relative ease. This should be your most common choice.</div>
+          <div class="easy-meaning"><span style="color: skyblue"><strong>Easy</strong></span>: Select this if you recalled the answer instantly with no effort.</div>
+        </div>
+    </div>
+    <div class="flashcards-container">
+      <!-- When this side will be flipped you should assign the user with the 4 ANKI buttons. Flip condition is card click. -->
+      <div class="flashcard-front"></div>
+    </div>
+    <div class="options-container">
+      <div class="again-button">
+        <input type="submit" value="Again" class="again" />
+      </div>
+      <div class="hard-button">
+        <input type="submit" value="Hard" class="hard" />
+      </div>
+      <div class="good-button">
+        <input type="submit" value="Good" class="good" />
+      </div>
+      <div class="easy-button">
+        <input type="submit" value="Easy" class="easy" />
+      </div>
+      <!-- Create a "when is your next card due" page and put its html here instead of index. But first, the backend work. -->
+      <form action="flashcards-review.html" method="GET" enctype="multipart/form-data">
+        <div class="next-button">
+          <button class="next-button">
+            Next card
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/df7e89c80c.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="flashcards-script.js"></script>
+</html>

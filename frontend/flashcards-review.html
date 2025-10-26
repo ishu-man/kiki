@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="flashcards-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="review-style.css" />
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <ul>
+          <li class="nav-heading"><strong><a href="index.html">Kiki</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="https://dl.acm.org/doi/10.1145/3534678.3539081?cid=99660547150">Research</a></li>
+        <li><a href="#">Try it</a></li>
+      </ul>
+    </nav>
+    <div class="content-section">
+      <div class="blob"></div>
+      <h1 class="review-heading">Review Session</h1>
+      <p class="review-text">Time to strengthen your memory! Review the flashcards Kiki has scheduled for you today. Remember to rate your recall honestly using the buttons below.</p>
+    </div>
+    <div class="review-section">
+    <div class="stats-section">
+      <div class="left-section">
+        <div class="due-minutes">0</div>
+        <div class="left-subtext">days until next session</div>
+      </div>
+      <i class="fa-solid fa-grip-lines-vertical" id="separator"></i>
+      <div class="right-section">
+        <div class="due-cards">0</div>
+        <div class="right-subtext">cards in queue for review</div>
+      </div>
+    </div>
+      <div class="start-review-session-button">
+        <button class="submit-button">START REVIEW</button>
+      </div>
+    </div>
+
+<div class="flashcards-section">
+    <div class="flashcards-container">
+      <!-- When this side will be flipped you should assign the user with the 4 ANKI buttons. Flip condition is card click. -->
+      <div class="flashcard-front"></div>
+    </div>
+    <div class="options-container">
+      <div class="again-button">
+        <input type="submit" value="Again" class="again" />
+      </div>
+      <div class="hard-button">
+        <input type="submit" value="Hard" class="hard" />
+      </div>
+      <div class="good-button">
+        <input type="submit" value="Good" class="good" />
+      </div>
+      <div class="easy-button">
+        <input type="submit" value="Easy" class="easy" />
+      </div>
+      <!-- Create a "when is your next card due" page and put its html here instead of index. But first, the backend work. -->
+      <form action="index.html" method="GET" enctype="multipart/form-data">
+        <div class="next-button">
+          <button class="next-button">
+            Next card
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/df7e89c80c.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="flashcards-review.js"></script>
+</html>

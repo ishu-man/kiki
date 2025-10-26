@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Hello world!</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navigation-bar">
+        <ul>
+          <li class="nav-heading"><strong><a href="#hero-section">Kiki</a></strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="https://dl.acm.org/doi/10.1145/3534678.3539081?cid=99660547150">Research</a></li>
+          <li><a href="#">Try it</a></li>
+        </ul>
+      </nav>
+      <div class="hero-section">
+        <div class="blob"></div>
+          <h1 class="hero-heading">Learn by <span class="highlighted">listening</span></h1>
+          <p class="hero-text">With Kiki, you can learn anything you want by just listening. It then tests you against the battle-tested FSRS algorithm to see what you've learned and where you're lacking. Try it right now by filling in the fields below!</p>
+      </div>
+      <div class="user-prompt-section">
+        <form action="audio-listen.html" method="GET" enctype="multipart/form-data">
+            <div class="topic">
+                <div class="topic-text">
+                    <label for="topic" class="prompt-heading">Topic</label>
+                    <p>What do you want to learn?</p>
+                    <div class="example-subtext">ex. Binary Search</div>
+                </div>
+                <input type="text" name="topic" id="topic" aria-required="true">
+            </div>
+            <div class="context">
+                <div class="context-text">
+                    <label for="context" class="prompt-heading">Context</label>
+                    <p>What do you already know about this subject?</p>
+                    <div class="example-subtext">ex. I know what an array is, but I've never heard of this.</div>
+                </div>
+                <input type="text" name="context" id="context" aria-required="true">
+            </div>
+            <div class="goal">
+                <div class="goal-text">
+                    <label for="goal" class="prompt-heading">Goal</label>
+                    <p>What do you want to be able to do or explain after?</p>
+                    <div class="example-subtext">ex. I want to understand its time complexity and how to implement it.</div>
+                </div>
+                <input type="goal" name="goal" id="goal" aria-required="true">
+            </div>
+            <div class="submit-section">
+            <input type="submit" class="submit-button" value="Start!">
+            </div>
+        </form>
+      </div>
+      <div class="fsrs-section">
+        <div class="blob"></div>
+          <h1 class="fsrs-heading">But what even is <em>FSRS</em>?</div></span></h1>
+          <p class="hero-text">
+            FSRS stands for Free Spaced Repetition Scheduler (see <a href="https://dl.acm.org/doi/10.1145/3534678.3539081?cid=99660547150"><strong>Research</strong></a>) Think of it as a smart tutor for your memory. Unlike older methods that use fixed guesses, FSRS is a modern algorithm that analyzes your personal review history to understand how your memory works.
+
+            It models your unique "forgetting curve" for each piece of information, predicting the perfect moment to show you a flashcard again—right before you're about to forget it.
+
+            The result? You achieve maximum long-term retention with significantly fewer reviews, making your learning sessions incredibly efficient. It's science-backed learning, tailored just for you. 
+          </p>
+      </div>
+
+    </main>
+  </body>
+<script src="index-script.js"></script>
+</html>
